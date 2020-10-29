@@ -1,10 +1,17 @@
-const assertArraysEqual = function(arr1, arr2) {
-  let string1 = arr1.join();
-  let string2 = arr2.join();
-  
-  if (string1 === string2) {
-    console.log("The arrays are equal");
-  } else{
-    console.log("The arrays are not equal");
+const assertArraysEqual = function(actual, expected) {
+  if (Array.isArray(actual) && Array.isArray(expected) && actual.length === expected.length) {
+    let isEqual = true;
+    for (let i = 0; i < actual.length; i++) {
+      if (actual[i] !== expected[i]) {
+        isEqual = false;
+      }
+    }
+    if (isEqual) {
+      console.log(`Assert succeeded: ${actual} = ${expected}`);
+      
+    } else {
+      console.log(`Assert failed: ${actual} != ${expected}`);
+      
+    }
   }
- };
+};
