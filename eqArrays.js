@@ -1,5 +1,5 @@
 const eqArrays = function(actual, expected) {
-  if (Array.isArray(actual) && Array.isArray(expected) && actual.length === expected.length) {
+  if (actual.length === expected.length) {
     let isEqual = true;
     for (let i = 0; i < actual.length; i++) {
       if (actual[i] !== expected[i]) {
