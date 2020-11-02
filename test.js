@@ -1,19 +1,8 @@
-const assertArraysEqual = function(actual, expected) {
-  if (Array.isArray(actual) && Array.isArray(expected) && actual.length === expected.length) {
-    let isEqual = true;
-    for (let i = 0; i < actual.length; i++) {
-      if (actual[i] !== expected[i]) {
-        isEqual = false;
-      }
-    }
-    if (isEqual) {
-      console.log(`Assert succeeded: ${actual} = ${expected}`);
-      
-    } else {
-      console.log(`Assert failed: ${actual} != ${expected}`);
-      
-    }
+const foo = function() {
+  var x = 1;
+  if (x === 1) {
+    let y = 2;
   }
-};
-
-assertArraysEqual([1,2],[1,3]);
+  console.log('Value of y is ' + y);
+}
+foo();
