@@ -7,9 +7,9 @@ describe('#middle', () => {
     assert.strictEqual(middle([1], []));
   })
   it("should return the two center elements for an even numbered array", () => {
-    assert.strictEqual(middle([2,3], [1,2,3,4]));
+    assert.deepEqual(middle([1, 2, 3, 4], [2, 3]));
   })
   it("should return the center element from a odd numbered array", () => {
-    assert.strictEqual(middle([3], [1,2,3,4,5]));
-  })
-})
+    assert.strictEqual(middle([1, 2, 3, 4, 5], [3]));
+  });
+});
