@@ -11,3 +11,6 @@ let reverse = function(string) {
     console.log(reverse(string));
   }; 
 
+console.log(reverse("This is a test"));
+
+module.exports = reverse;

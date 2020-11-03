@@ -1,20 +1,5 @@
-const assertArraysEqual = function(actual, expected) {
-  if (Array.isArray(actual) && Array.isArray(expected) && actual.length === expected.length) {
-    let isEqual = true;
-    for (let i = 0; i < actual.length; i++) {
-      if (actual[i] !== expected[i]) {
-        isEqual = false;
-      }
-    }
-    if (isEqual) {
-      console.log(`Assert succeeded: ${actual} = ${expected}`);
-      
-    } else {
-      console.log(`Assert failed: ${actual} != ${expected}`);
-      
-    }
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual');
+
 
 const letterPositions = function(sentence) {
   const results = {};
@@ -34,4 +19,4 @@ const letterPositions = function(sentence) {
 };
 
 
-assertArraysEqual(letterPositions("hello").e, [1]);
+module.exports = letterPositions;
